@@ -24,6 +24,7 @@ public class Product {
 //        this.deleteFlag = false;
     }
 
+
 //    public boolean isDeleteFlag() {
 //        return deleteFlag;
 //    }

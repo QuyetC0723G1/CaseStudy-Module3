@@ -5,21 +5,20 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ProductController", value = "/product")
-public class ProductController extends HttpServlet {
+@WebServlet(name = "HomePageController", value = "/home")
+public class ProductDetailController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        switch (action) {
-            case "formadd":
-                showFormAddProduct(request,response);
+        switch (action){
+            case "productdetail":
+                showHomePage(request,response);
                 break;
         }
     }
-  private void showFormAddProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("product/formadd.jsp");
+    private void showHomePage(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("home/productdetail.jsp");
         dispatcher.forward(request,response);
-
     }
 
     @Override

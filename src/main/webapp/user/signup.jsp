@@ -21,7 +21,7 @@
         }
         input{
             height: 20px;
-            width: 200px;
+            width: 250px;
         }
         tbody{
             text-align: center;
@@ -50,6 +50,13 @@
             <tr><td><input type="text" name="username" placeholder="Enter the username"></td></tr>
             <tr><td><input type="password" name="password" placeholder="Enter the password"></td></tr>
             <tr><td><input type="text" name="phonenumber" placeholder="Enter the phone number"></td></tr>
+            <tr><td><input type="text" name="customername" placeholder="Enter the your name"></td></tr>
+            <tr><td><input type="text" name="age" placeholder="Enter the age"></td></tr>
+            <tr><td><input type="text" name="address" placeholder="Enter the address"></td></tr>
+            <tr><td><input type="email" name="age" placeholder="Enter the email"></td></tr>
+
+
+
             <tr><td><button class="btn-submit" type="submit">Sign Up</button></td></tr>
             </tbody>
         </table>

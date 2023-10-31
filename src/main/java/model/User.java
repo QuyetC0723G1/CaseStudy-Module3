@@ -8,22 +8,38 @@ public class User {
     private String password;
     private int role;
     private boolean deleteFlag;
+    private int phoneNumber;
 
-    public User(int id, String username, String password) {
+    public User(int id, String username, String password,int phoneNumber) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.role = 1;
+        this.phoneNumber = phoneNumber;
 //        this.deleteFlag = false;
     }
 
-//    public boolean isDeleteFlag() {
+    public User(String username, String password,int phoneNumber) {
+        this.username = username;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }
+    //    public boolean isDeleteFlag() {
 //        return deleteFlag;
 //    }
 //
 //    public void setDeleteFlag(boolean deleteFlag) {
 //        this.deleteFlag = deleteFlag;
 //    }
+
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public int getRole() {
         return role;

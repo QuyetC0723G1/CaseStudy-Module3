@@ -18,16 +18,16 @@ public class HomePageController extends HttpServlet {
         String action = request.getParameter("action");
         switch (action){
             case "home":
-                showHome(request,response);
+//                showHome(request,response);
                 break;
         }
     }
-    private void showHome(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
-        List<Product> list = productService.findAll();
-        request.setAttribute("listProduct",list);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/home.jsp");
-        requestDispatcher.forward(request,response);
-    }
+//    private void showHome(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+//        List<Product> list = productService.findAll();
+//        request.setAttribute("listProduct",list);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/products.jsp");
+//        requestDispatcher.forward(request,response);
+//    }
     private void showAllProductToHome(HttpServletRequest request , HttpServletResponse response){
         List<Product> list = productService.findAll();
         request.setAttribute("listProduct",list);

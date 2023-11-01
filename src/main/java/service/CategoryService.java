@@ -1,8 +1,13 @@
 package service;
 
 import model.Category;
+import model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryService implements ICrud<Category>{
+    List<Category> categoryList = new ArrayList<>();
     @Override
     public void add(Category category) {
 
@@ -36,5 +41,10 @@ public class CategoryService implements ICrud<Category>{
     @Override
     public void remove(String id) {
 
+    }
+
+    @Override
+    public List<Category> findAll() {
+        return null;
     }
 }

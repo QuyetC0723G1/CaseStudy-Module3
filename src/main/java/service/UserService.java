@@ -44,6 +44,13 @@ public class UserService implements ICrud<User>{
     public void remove(String id) {
 
     }
+
+    @Override
+    public List<User> findAll() {
+
+        return null;
+    }
+
     boolean checkUser(int id){
         return false;
     }

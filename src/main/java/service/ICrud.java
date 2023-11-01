@@ -1,5 +1,9 @@
 package service;
 
+import model.User;
+
+import java.util.List;
+
 public interface ICrud<E> {
      void add(E e);
      E findById(String id);
@@ -8,5 +12,6 @@ public interface ICrud<E> {
      void edit(String id, E e);
      void remove(int id);
      void remove(String id);
+     List<E> findAll();
 
 }

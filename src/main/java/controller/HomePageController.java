@@ -1,12 +1,18 @@
 package controller;
 
+import model.Product;
+import service.ProductService;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "HomePageController", value = "/home")
 public class HomePageController extends HttpServlet {
+    ProductService productService = new ProductService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -17,8 +23,14 @@ public class HomePageController extends HttpServlet {
         }
     }
     private void showHome(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+        List<Product> list = productService.findAll();
+        request.setAttribute("listProduct",list);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/home.jsp");
         requestDispatcher.forward(request,response);
+    }
+    private void showAllProductToHome(HttpServletRequest request , HttpServletResponse response){
+        List<Product> list = productService.findAll();
+        request.setAttribute("listProduct",list);
     }
 
     @Override

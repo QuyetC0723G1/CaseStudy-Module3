@@ -17,7 +17,7 @@ public class HomePageController extends HttpServlet {
         }
     }
     private void showHome(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/home.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("home/products.jsp");
         requestDispatcher.forward(request,response);
     }
 

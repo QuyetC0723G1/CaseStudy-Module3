@@ -41,19 +41,7 @@
 <!-- HEADER -->
 <header>
     <!-- TOP HEADER -->
-    <div id="top-header">
-        <div class="container">
-            <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-            </ul>
-            <ul class="header-links pull-right">
-                <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
-            </ul>
-        </div>
-    </div>
+   <%@include file="../header/header.jsp"%>
     <!-- /TOP HEADER -->
 
     <!-- MAIN HEADER -->
@@ -431,6 +419,7 @@
                         <div class="product">
                             <div class="product-img">
                                 <img src="${item.image}" alt="">
+
                                 <div class="product-label">
                                     <span class="sale">-30%</span>
                                     <span class="new">NEW</span>
@@ -446,6 +435,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
+
                                 </div>
                                 <div class="product-btns">
                                     <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -459,6 +449,7 @@
                         </div>
                     </div>
                     </c:forEach>
+
                     <!-- /product -->
                 </div>
                 <!-- /store products -->

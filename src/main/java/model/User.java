@@ -8,9 +8,9 @@ public class User {
     private String password;
     private int role;
     private boolean deleteFlag;
-    private int phoneNumber;
+    private String phoneNumber;
 
-    public User(int id, String username, String password,int phoneNumber) {
+    public User(int id, String username, String password,String phoneNumber) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -19,10 +19,11 @@ public class User {
 //        this.deleteFlag = false;
     }
 
-    public User(String username, String password,int phoneNumber) {
+    public User(String username, String password,String phoneNumber, int role) {
         this.username = username;
         this.password = password;
         this.phoneNumber = phoneNumber;
+        this.role = role;
     }
     //    public boolean isDeleteFlag() {
 //        return deleteFlag;
@@ -33,11 +34,11 @@ public class User {
 //    }
 
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -1,8 +1,13 @@
 package service;
 
 import model.Cart;
+import model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CartService implements ICrud<Cart>{
+    List<Cart> cartList = new ArrayList<>();
     @Override
     public void add(Cart cart) {
 
@@ -36,5 +41,10 @@ public class CartService implements ICrud<Cart>{
     @Override
     public void remove(String id) {
 
+    }
+
+    @Override
+    public List<Cart> findAll() {
+        return null;
     }
 }

@@ -37,7 +37,7 @@
 <body>
 <center>
 <div class="menu">
-  <form action="" method="post">
+  <form action="http://localhost:8080/product?action=formadd" method="post">
     <table>
       <tbody>
 
@@ -46,8 +46,8 @@
       <tr><td><input type="text" name="name" placeholder="Product name"></td></tr>
       <tr><td><input type="text" name="quantity" placeholder="Quantity"></td></tr>
       <tr><td><input type="text" name="price" placeholder="Price"></td></tr>
-      <tr><td><input type="text" name="manufacturer" placeholder="Manufacturer"></td></tr>
-      <tr><td><input type="text" name="categoryid" placeholder="Category"></td></tr>
+      <tr><td><input type="text" name="manufacture" placeholder="Manufacture"></td></tr>
+      <tr><td><input type="text" name="categoryId" placeholder="Category"></td></tr>
       <tr><td><input type="text" name="image" placeholder="Product image"></td></tr>
       <tr><td><input type="text" name="description" placeholder="Description"></td></tr>
       <tr><td><button type="submit">Add Product</button></td></tr>

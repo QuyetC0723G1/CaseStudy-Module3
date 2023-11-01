@@ -1,8 +1,13 @@
 package service;
 
 import model.Customer;
+import model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerService implements ICrud<Customer> {
+    List<Customer> customers = new ArrayList<>();
     @Override
     public void add(Customer customer) {
 
@@ -36,5 +41,10 @@ public class CustomerService implements ICrud<Customer> {
     @Override
     public void remove(String id) {
 
+    }
+
+    @Override
+    public List<Customer> findAll() {
+        return null;
     }
 }

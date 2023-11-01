@@ -5,19 +5,19 @@ public class Product {
     private String name;
     private int quantity;
     private double price;
-    private String manufacturer;
+    private String manufacture;
     private int categoryId;
     private String image;
     private String description;
 //    private boolean deleteFlag;
 
 
-    public Product(String id, String name, int quantity, double price, String manufacturer,int categoryId,String image,String description) {
+    public Product(String id, String name, int quantity, double price, String manufacture,int categoryId,String image,String description) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
-        this.manufacturer = manufacturer;
+        this.manufacture = manufacture;
         this.categoryId = categoryId;
         this.image = image;
         this.description = description;
@@ -89,11 +89,11 @@ public class Product {
         this.price = price;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
+    public String getManufacture() {
+        return manufacture;
     }
 
     public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+        this.manufacture = manufacturer;
     }
 }

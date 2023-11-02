@@ -47,4 +47,9 @@ public class OrderService implements ICrud<Order>{
     public List<Order> findAll() {
         return null;
     }
+
+    @Override
+    public List<Order> findByName(String name) {
+        return null;
+    }
 }

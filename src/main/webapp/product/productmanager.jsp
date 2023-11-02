@@ -56,7 +56,7 @@
 <center>
   <h2>List Product In Store</h2>
   <form action="http://localhost:8080/product" method="get">
-    <input type="hidden" name="action" value="home">
+    <input type="hidden" name="action" value="productmanager">
     <input type="text" name="q" placeholder="Search by Product Name">
     <input type="submit" value="Search">
   </form>
@@ -83,18 +83,21 @@
         <td><img src="${item.image}" alt=""></td>
         <td>${item.description}</td>
         <td><a href="http://localhost:8080/product?action=formedit&id=${item.id}"><button>Edit</button></a></td>
-        <td><button onclick="show_confirm(${item.id})">Delete</button></td>
+        <td><button onclick="show_confirm('${item.id}')">Delete</button></td>
+        <a href="http://localhost:8080/product?action=delete&id=${item.id}" id="delete" style="display: none">AAA</a>
       </tr>
     </c:forEach>
 
   </table>
+
   <button class="back"><a href="http://localhost:8080/product?action=formadd">Add Product</a></button>
 </center>
+
 <script>
   function show_confirm(id){
     let r = confirm(`Are you sure ?`)
     if(r){
-      document.location.href = "http://localhost:8080/product?action=delete&id=" + id;
+      document.getElementById('delete').click();
     }
   }
 

@@ -47,4 +47,9 @@ public class CustomerService implements ICrud<Customer> {
     public List<Customer> findAll() {
         return null;
     }
+
+    @Override
+    public List<Customer> findByName(String name) {
+        return null;
+    }
 }

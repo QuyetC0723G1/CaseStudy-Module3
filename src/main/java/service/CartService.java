@@ -47,4 +47,9 @@ public class CartService implements ICrud<Cart>{
     public List<Cart> findAll() {
         return null;
     }
+
+    @Override
+    public List<Cart> findByName(String name) {
+        return null;
+    }
 }

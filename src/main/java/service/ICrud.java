@@ -13,5 +13,6 @@ public interface ICrud<E> {
      void remove(int id);
      void remove(String id);
      List<E> findAll();
+     List<E> findByName(String name);
 
 }

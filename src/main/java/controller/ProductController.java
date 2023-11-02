@@ -27,12 +27,19 @@ public class ProductController extends HttpServlet {
             case "formedit":
                 showFormEdit(request,response);
                 break;
+            case "delete":
+                deleteProduct(request,response);
+                break;
         }
     }
     private void showCrud(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Product> list = productService.findAll();
-        request.setAttribute("listProduct",list);
+       String name = request.getParameter("q");
+       if (name == null){
+           name = "";
+       }
+        List<Product> list = productService.findByName(name);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("product/productmanager.jsp");
+        request.setAttribute("listProduct",list);
         requestDispatcher.forward(request,response);
     }
     private void showListProduct(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
@@ -62,6 +69,7 @@ public class ProductController extends HttpServlet {
             case "formedit" :
                 editProduct(request,response);
                 break;
+
         }
 
     }
@@ -96,7 +104,11 @@ public class ProductController extends HttpServlet {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
+    }
+    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String id = request.getParameter("id");
+        productService.remove(id);
+        response.sendRedirect("product?action=productmanager");
     }
 
 }

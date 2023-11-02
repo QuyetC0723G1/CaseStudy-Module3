@@ -47,4 +47,9 @@ public class CategoryService implements ICrud<Category>{
     public List<Category> findAll() {
         return null;
     }
+
+    @Override
+    public List<Category> findByName(String name) {
+        return null;
+    }
 }

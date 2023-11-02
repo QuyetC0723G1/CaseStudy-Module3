@@ -48,4 +48,9 @@ public class OrderDetailService implements ICrud<OrderDetail> {
         return null;
     }
 
+    @Override
+    public List<OrderDetail> findByName(String name) {
+        return null;
+    }
+
 }

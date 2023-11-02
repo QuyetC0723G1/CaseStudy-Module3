@@ -273,13 +273,13 @@
                     <div class="price-filter">
                         <div id="price-slider"></div>
                         <div class="input-number price-min">
-                            <input id="price-min" type="number">
+                            <input id="price-min" type="number" name="priceMin" value="priceMin">
                             <span class="qty-up">+</span>
                             <span class="qty-down">-</span>
                         </div>
                         <span>-</span>
                         <div class="input-number price-max">
-                            <input id="price-max" type="number">
+                            <input id="price-max" type="number" name="priceMax" value="priceMax">
                             <span class="qty-up">+</span>
                             <span class="qty-down">-</span>
                         </div>

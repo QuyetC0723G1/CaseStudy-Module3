@@ -56,6 +56,11 @@ public class UserService implements ICrud<User>{
         return null;
     }
 
+    @Override
+    public List<User> findByName(String name) {
+        return null;
+    }
+
     boolean checkUser(int id){
         return false;
     }

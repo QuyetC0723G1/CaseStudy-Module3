@@ -1,16 +1,26 @@
 package service;
 
+import database.DbConnect;
 import model.Order;
-import model.User;
 
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrderService implements ICrud<Order>{
-    List<Order> orderList = new ArrayList<>();
+    Connection connection = DbConnect.getConnection();
+    List<Order> orderList;
     @Override
     public void add(Order order) {
-
+        String sql = "insert into `order`(id,customerId) values (?,?) where deleteflag = 0;";
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1,order.getId());
+            statement.setInt(2,order.getCustomerId());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -45,11 +55,31 @@ public class OrderService implements ICrud<Order>{
 
     @Override
     public List<Order> findAll() {
-        return null;
+        List<Order> list = new ArrayList<>();
+        String sql = "select * from `order` where deleteflag = 0;";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                String id = resultSet.getString("id");
+                int customerId = resultSet.getInt("customerId");
+                Timestamp datetime = resultSet.getTimestamp("datetime");
+                double totalAmount = resultSet.getDouble("totalAmount ");
+                String status = resultSet.getString("status");
+                Order order = new Order(id,customerId,datetime,totalAmount,status);
+                list.add(order);
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return list;
     }
 
     @Override
     public List<Order> findByName(String name) {
+
         return null;
     }
+
 }

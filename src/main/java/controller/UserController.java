@@ -1,7 +1,9 @@
 package controller;
 
 import database.DbConnect;
+import model.Customer;
 import model.User;
+import service.CustomerService;
 import service.UserService;
 
 import javax.servlet.*;
@@ -13,6 +15,7 @@ import java.sql.Connection;
 @WebServlet(name = "UserController", value = "/user")
 public class UserController extends HttpServlet {
     UserService userService = new UserService();
+    CustomerService customerService = new CustomerService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -36,6 +39,18 @@ public class UserController extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        switch (action){
+            case "signup" :
+                signup(request,response);
+                break;
+            case "login":
+                login(request,response);
+                break;
+        }
+    }
+
+    private void login(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
         String user = request.getParameter("username");
         String password = request.getParameter("password");
         User u = userService.getUser(user,password);
@@ -50,6 +65,22 @@ public class UserController extends HttpServlet {
             response.sendRedirect("home?action=home");
         }
 
+    }
+    private void signup(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+        String user = request.getParameter("username");
+        String password = request.getParameter("password");
+        String phone = request.getParameter("phone");
+        String fullname = request.getParameter("fullname");
+        int age = Integer.parseInt(request.getParameter("age"));
+        String address = request.getParameter("address");
+        String email = request.getParameter("email");
+        User u = new User(user,password,phone);
+        userService.add(u);
+        User u1 = userService.getUserByUsername(user);
+        Customer c = new Customer(fullname,age,address,email,u1.getId());
+        customerService.add(c);
+        request.setAttribute("mess","Register succeed");
+        request.getRequestDispatcher("user/login.jsp").forward(request,response);
     }
 
 

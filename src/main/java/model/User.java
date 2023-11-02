@@ -25,6 +25,13 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.role = role;
     }
+
+    public User(String username, String password, String phoneNumber) {
+        this.username = username;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }
+
     //    public boolean isDeleteFlag() {
 //        return deleteFlag;
 //    }

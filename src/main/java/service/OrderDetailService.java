@@ -35,9 +35,7 @@ public class OrderDetailService implements ICrud<OrderDetail> {
 
     @Override
     public void remove(int id) {
-
     }
-
     @Override
     public void remove(String id) {
 

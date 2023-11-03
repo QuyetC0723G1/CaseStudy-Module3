@@ -1,16 +1,16 @@
 package model;
 
-import java.time.LocalDate;
+import java.sql.Timestamp;
 
 public class Order {
     private String id;
     private int customerId;
-    private LocalDate date;
-    private int totalAmount;
-    private int status;
+    private Timestamp date;
+    private double totalAmount;
+    private String status;
     private boolean deleteFlag;
 
-    public Order(String id, int customerId, LocalDate date, int totalAmount, int status) {
+    public Order(String id, int customerId, Timestamp date, double totalAmount, String status) {
         this.id = id;
         this.customerId = customerId;
         this.date = date;
@@ -43,27 +43,27 @@ public class Order {
         this.customerId = customerId;
     }
 
-    public LocalDate getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 
-    public int getTotalAmount() {
+    public double getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(int totalAmount) {
+    public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }

@@ -50,7 +50,7 @@
         </g>
   </svg>
 
-    <form action="" method="post">
+    <form action="user?action=login" method="post">
         <div class="username">
             <label>Username</label>
             <div class="sec-2">
@@ -72,7 +72,7 @@
         <button class="login">Login</button>
 
     </form>
-    <div class="footer"><span>Signup</span><span>Forgot Password?</span></div>
+    <div class="footer"><span><a href="user?action=signup">Signup</a></span><span>Forgot Password?</span></div>
 
 </div>
 </body>

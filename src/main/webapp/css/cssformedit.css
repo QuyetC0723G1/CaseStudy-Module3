@@ -1,0 +1,30 @@
+.bg-color{
+    background-color: blue;
+}
+
+.bg-color a{
+    color: white;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+tbody{
+    align-items: center;
+}
+#navbarSupportedContent{
+    color: white;
+    margin-left: 20px;
+}
+#PPQ{
+    display: flex;
+    justify-content: space-between;
+}
+.pm{
+    width: 35%;
+}
+.btn-primary{
+    margin-top: 10px;
+}

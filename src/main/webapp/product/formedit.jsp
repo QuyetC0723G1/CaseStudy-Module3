@@ -20,7 +20,6 @@
 </head>
 <body>
 <div class="menu">
-  <form action="http://localhost:8080/product?action=formedit" method="post">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -47,7 +46,7 @@
           </nav>
         </div>
         <div class="col-12 mt-3"  >
-          <form action="http://localhost:8080/product?action=create" method="post">
+          <form action="http://localhost:8080/product?action=formedit" method="post">
             <div class="form-row" id="PPQ">
               <div>
                 <label for="Product id">Product id</label>
@@ -108,7 +107,6 @@
         </div>
       </div>
     </div>
-  </form>
 </div>
 
 </body>

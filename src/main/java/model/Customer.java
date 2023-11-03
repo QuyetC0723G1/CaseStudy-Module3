@@ -19,7 +19,14 @@ public class Customer {
 //        this.deleteFlag = false;
     }
 
-//    public boolean isDeleteFlag() {
+    public Customer(String name, int age, String address, String email, int userId) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.email = email;
+        this.userId = userId;
+    }
+    //    public boolean isDeleteFlag() {
 //        return deleteFlag;
 //    }
 //

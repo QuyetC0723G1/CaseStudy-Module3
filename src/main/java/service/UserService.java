@@ -1,11 +1,13 @@
 package service;
 
 import database.DbConnect;
+import model.Product;
 import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,16 @@ public class UserService implements ICrud<User>{
 
     @Override
     public void add(User user) {
-        users.add(user);
+        String sql = "insert into user(username, password,phonenumber) values (?,?,?);";
+        try {
+            PreparedStatement statement= connection.prepareStatement(sql);
+            statement.setString(1,user.getUsername());
+            statement.setString(2, user.getPassword());
+            statement.setString(3,user.getPhoneNumber());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -82,4 +93,19 @@ public class UserService implements ICrud<User>{
         return null;
     }
 
+    public User getUserByUsername(String username){
+        try{
+            String query = "select * from user where username =?";
+            PreparedStatement ps = connection.prepareStatement(query);
+            ps.setString(1,username);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                User u = new User(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(6));
+                return u;
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
 }

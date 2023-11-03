@@ -14,6 +14,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Document</title>
   <style>
     img{
@@ -49,17 +50,60 @@
       margin-top: 20px;
       color: cornflowerblue;
     }
+    body {
+      background-image: url("../image/apple1.png");
+    }
+    h2{
+      width: 60%;
+      height: 4.5rem;
+      background-color: red;
+      font-size: 2rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .framesearch{
+      width: 60%;
+      height: 3rem;
+      display: flex;
+      background-color: darkblue;
+      margin-bottom: 0.5rem;
+      justify-content: center;
+      padding-top: 0.8rem;
+      border-radius: 10px;
+    }
+    #search_by_product_name{
+      width: 15rem;
+      height: 1.5rem;
+      padding: 0.3rem;
+      border-radius: 0.75rem;
+    }
+    #search{
+      width: 10rem;
+      height: 1.5rem;
+      padding: 0.25rem;
+      border: 0.8rem;
+      margin-left: 10px;
+      border-radius: 0.5rem;
+    }
+
   </style>
 </head>
 <body>
 
 <center>
   <h2>List Product In Store</h2>
-  <form action="http://localhost:8080/product" method="get">
-    <input type="hidden" name="action" value="productmanager">
-    <input type="text" name="q" placeholder="Search by Product Name">
-    <input type="submit" value="Search">
-  </form>
+  <div class="framesearch">
+    <form action="http://localhost:8080/product" method="get" >
+      <input type="hidden" name="action" value="productmanager">
+      <input type="text" name="q" placeholder="Search by Product Name" id="search_by_product_name">
+      <input type="submit" value="Search" id="search">
+    </form>
+
+
+  </div>
+
   <table>
     <tr>
       <th>Id</th>
@@ -91,6 +135,8 @@
   </table>
 
   <button class="back"><a href="http://localhost:8080/product?action=formadd">Add Product</a></button>
+
+
 </center>
 
 <script>

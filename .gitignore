@@ -22,6 +22,7 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 .nb-gradle/
+.gradle/
 
 # Eclipse
 .classpath

@@ -7,56 +7,104 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Title</title>
-  <style>
-    table{
-      border-spacing: 15px;
-    }
-    input{
-      height: 30px;
-      width: 250px;
-    }
-    tbody{
-      text-align: center;
-    }
-    .menu {
-      width: 100%;
-      height: 100%;
-      background-color: #B9BABC;
-    }
-    h2{
-      color: #3FB8AF;
-    }
-    body, center, .menu {
-      height: 800px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/cssformadd.css">
+
 </head>
 <body>
-<center>
 <div class="menu">
-  <form action="http://localhost:8080/product?action=formadd" method="post">
-    <table>
-      <tbody>
 
-      <tr><td>FORM ADD PRODUCT</td></tr>
-      <tr><td><input type="text" name="id" placeholder="Product id"></td></tr>
-      <tr><td><input type="text" name="name" placeholder="Product name"></td></tr>
-      <tr><td><input type="text" name="quantity" placeholder="Quantity"></td></tr>
-      <tr><td><input type="text" name="price" placeholder="Price"></td></tr>
-      <tr><td><input type="text" name="manufacture" placeholder="Manufacture"></td></tr>
-      <tr><td><input type="text" name="categoryId" placeholder="Category"></td></tr>
-      <tr><td><input type="text" name="image" placeholder="Product image"></td></tr>
-      <tr><td><input type="text" name="description" placeholder="Description"></td></tr>
-      <tr><td><button type="submit">Add Product</button></td></tr>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg bg-color">
+            <a class="navbar-brand" href="http://localhost:8080/product?action=productmanager">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-      </tbody>
-    </table>
-  </form>
+            <div class="collapse navbar-collapse formnav-bar" id="navbarSupportedContent" >
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <!--<a class="nav-link" href="#">Create Product <span class="sr-only">(current)</span></a>-->
+                  <h2>FORM ADD PRODUCT</h2>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="col-12 mt-3"  >
+          <form action="http://localhost:8080/product?action=formadd" method="post">
+            <div class="form-row" id="PPQ">
+              <div>
+                <label for="id">Product id</label>
+                <input type="text" class="form-control" id="id" name="id" placeholder="Product id ">
+              </div>
+              <div>
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price" name="price" placeholder="Price">
+              </div>
+              <div >
+                <label for="quantity">Quantity</label>
+                <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
+              </div>
+            </div>
+            <div class="pm">
+              <div class="form-group">
+                <label for="name">Product name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Product name">
+              </div>
+
+              <div class="form-group">
+                <label for="manufacture">Manufacture</label>
+                <input type="text" class="form-control" id="manufacture" name="manufacture" placeholder="Manufacture">
+              </div>
+
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group col-md-4">
+                <label for="categoryId" >Category</label>
+<%--                <select id="categoryId" class="form-control" name="categoryId" >--%>
+<%--                  <c:forEach var="item" items="${categoryList}">--%>
+<%--                    <option value="${item.id}">${item.name} </option>--%>
+
+<%--                  </c:forEach>--%>
+
+<%--                </select>--%>
+                <input type="text" id="categoryId" name="categoryId" placeholder="Category">
+
+              </div>
+
+            </div>
+            <div class="form-row">
+              <label for="image">Product image</label>
+              <input type="text" class="form-control" id="image" name="image" placeholder="Product image">
+            </div>
+
+            <div class="form-row">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" placeholder="Description" cols="150" rows="2"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Add Product</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
 </div>
-</center>
-</body>
 
+
+</body>
 </html>

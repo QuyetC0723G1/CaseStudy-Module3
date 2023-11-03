@@ -70,7 +70,22 @@
       background-color: darkblue;
       margin-bottom: 0.5rem;
       justify-content: center;
-      padding-top: 1rem;
+      padding-top: 0.8rem;
+      border-radius: 10px;
+    }
+    #search_by_product_name{
+      width: 15rem;
+      height: 1.5rem;
+      padding: 0.3rem;
+      border-radius: 0.75rem;
+    }
+    #search{
+      width: 10rem;
+      height: 1.5rem;
+      padding: 0.25rem;
+      border: 0.8rem;
+      margin-left: 10px;
+      border-radius: 0.5rem;
     }
 
   </style>
@@ -82,9 +97,11 @@
   <div class="framesearch">
     <form action="http://localhost:8080/product" method="get" >
       <input type="hidden" name="action" value="productmanager">
-      <input type="text" name="q" placeholder="Search by Product Name">
-      <input type="submit" value="Search">
+      <input type="text" name="q" placeholder="Search by Product Name" id="search_by_product_name">
+      <input type="submit" value="Search" id="search">
     </form>
+
+
   </div>
 
   <table>

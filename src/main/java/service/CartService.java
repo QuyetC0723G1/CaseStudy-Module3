@@ -23,7 +23,7 @@ public class CartService implements ICrud<Cart>{
     public void add(Cart cart) {
         int customerId = 1;
         String productId = "H3G2";
-        int quantity = 2;
+        int quantity = 1;
         String checkProductQuery = "SELECT cart.id, product_quantity FROM cart WHERE customerId = ? AND productId = ? AND deleteflag = 0;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(checkProductQuery);

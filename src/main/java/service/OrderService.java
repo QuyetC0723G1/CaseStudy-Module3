@@ -9,7 +9,6 @@ import java.util.List;
 
 public class OrderService implements ICrud<Order>{
     Connection connection = DbConnect.getConnection();
-    List<Order> orderList;
     @Override
     public void add(Order order) {
         String sql = "insert into `order`(id,customerId) values (?,?) where deleteflag = 0;";
@@ -56,19 +55,18 @@ public class OrderService implements ICrud<Order>{
     @Override
     public List<Order> findAll() {
         List<Order> list = new ArrayList<>();
-        String sql = "select * from `order` where deleteflag = 0;";
+        String sql = "select id,customerId,date_registered,totalAmount,status from `order` where deleteflag = 0;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 String id = resultSet.getString("id");
                 int customerId = resultSet.getInt("customerId");
-                Timestamp datetime = resultSet.getTimestamp("datetime");
-                double totalAmount = resultSet.getDouble("totalAmount ");
+                Timestamp datetime = resultSet.getTimestamp("date_registered");
+                double totalAmount = resultSet.getDouble("totalAmount");
                 String status = resultSet.getString("status");
                 Order order = new Order(id,customerId,datetime,totalAmount,status);
                 list.add(order);
-
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

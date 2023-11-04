@@ -20,6 +20,9 @@
 </head>
 <body>
 <main class="page">
+
+    <form action="" method="post">
+
     <section class="shopping-cart dark">
         <div class="container">
             <div class="block-heading">
@@ -31,61 +34,65 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-8">
                         <div class="items">
+                            <c:forEach var="item" items="${requestScope.carts}">
+                                <div class="product">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img class="img-fluid mx-auto d-block image" src="${item.image}" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="info">
+                                                <div class="row">
+                                                    <div class="col-md-5 product-name">
+                                                        <div class="product-name">
+                                                            <a href="#">${item.name}</a>
+                                                            <div class="product-info">
+                                                                <div>Display: <span
+                                                                        class="value">${item.description}</span></div>
 
-
-
-
-                                    <c:forEach var="item" items="${requestScope.carts}">
-                                        <div class="product">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                      <img class="img-fluid mx-auto d-block image" src="${item.image}" alt="">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="info">
-                                            <div class="row">
-                                                <div class="col-md-5 product-name">
-                                                    <div class="product-name">
-                                                        <a href="#">${item.name}</a>
-                                                        <div class="product-info">
-                                                            <div>Display: <span class="value">${item.description}</span></div>
-
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-4 quantity">
-                                                    <label for="quantity">QUANTITY</label>
-                                                    <input id="quantity" type="number" value ="${item.quantity}" class="form-control quantity-input">
-                                                </div>
-                                                <div class="col-md-3 price">
-                                                    <span>$${item.price}</span>
+                                                    <div class="col-md-4 quantity">
+                                                        <label for="quantity">QUANTITY</label>
+                                                        <input id="quantity" type="number" value="${item.quantity}"
+                                                               class="form-control quantity-input">
+                                                    </div>
+                                                    <div class="col-md-3 price">
+                                                        <span>$${item.price}</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                </c:forEach>
-                </div>
+                            </c:forEach>
+                        </div>
 
-            </div>
+                    </div>
                     <div class="col-md-12 col-lg-4">
                         <div class="summary">
                             <h3>Summary</h3>
-                            <div class="summary-item"><span class="text">Subtotal</span><span class="price">$${money}</span></div>
-                            <div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
-                            <div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
-                            <div class="summary-item"><span class="text">Total</span><span class="price">$${money}</span></div>
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                            <div class="summary-item"><span class="text">Subtotal</span><span
+                                    class="price">$${money}</span></div>
+                            <div class="summary-item"><span class="text">Discount</span><span class="price">$0</span>
+                            </div>
+                            <div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span>
+                            </div>
+                            <div class="summary-item"><span class="text">Total</span><span
+                                    class="price">$${money}</span></div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Checkout</button>
                         </div>
                     </div>
-                </div> </div> </div>
+                </div>
 
+            </div>
+        </div>
     </section>
+    </form>
 </main>
 <script>
-    function incrementValue()
-    {
+    function incrementValue() {
         var value = parseInt(document.getElementById('number').value, 10);
         value = isNaN(value) ? 0 : value;
         value++;

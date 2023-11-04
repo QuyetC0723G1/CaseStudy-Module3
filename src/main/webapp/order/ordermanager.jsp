@@ -65,24 +65,22 @@
       <th>Id</th>
       <th>Customer Id</th>
       <th>Date</th>
-      <th>Price</th>
       <th>Total Amount</th>
       <th>Status</th>
       <th colspan="2">Action</th>
     </tr>
-    <c:forEach var="item" items="${ordeerList}">
+    <c:forEach var="item" items="${orderlist}">
       <tr>
         <td>${item.id}</td>
         <td>${item.customerId}</td>
         <td>${item.date}</td>
         <td>${item.totalAmount}</td>
         <td>${item.status}</td>
-        <td>${item.description}</td>
         <td><a href="http://localhost:8080/product?action=formedit&id=${item.id}"><button>Edit</button></a></td>
         <td><button onclick="show_confirm('${item.id}')">Delete</button></td>
         <a href="http://localhost:8080/product?action=delete&id=${item.id}" id="delete" style="display: none">AAA</a>
       </tr>
-    </c:forEach>
+        </c:forEach>
 
   </table>
   <button class="back"><a href="http://localhost:8080/product?action=formadd">Add Product</a></button>

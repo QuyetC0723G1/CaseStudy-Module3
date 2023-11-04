@@ -48,19 +48,7 @@
 <!-- HEADER -->
 <header>
     <!-- TOP HEADER -->
-    <div id="top-header">
-        <div class="container">
-            <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +0868-10-29-93</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> luxurystore_bestvn@email.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Nhà số 23, Lô TT-01, Khu đô thị MonCity, P. Hàm Nghi, Hà Nội</a></li>
-            </ul>
-            <ul class="header-links pull-right">
-                <li><a href="#"><i class="fa fa-dollar"></i>Sign Up</a></li>
-                <li><a href="#"><i class="fa fa-user-o"></i>Login</a></li>
-            </ul>
-        </div>
-    </div>
+    <%@include file="../header/header.jsp"%>
     <!-- /TOP HEADER -->
 
     <!-- MAIN HEADER -->
@@ -80,19 +68,7 @@
                 <!-- /LOGO -->
 
                 <!-- SEARCH BAR -->
-                <div class="col-md-6">
-                    <div class="header-search">
-                        <form>
-                            <select class="input-select">
-                                <option value="0">All Categories</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
-                            </select>
-                            <input class="input" placeholder="Search here">
-                            <button class="search-btn">Search</button>
-                        </form>
-                    </div>
-                </div>
+                <%@include file="../header/searchbar.jsp"%>
                 <!-- /SEARCH BAR -->
 
                 <!-- ACCOUNT -->

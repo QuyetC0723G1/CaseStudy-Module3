@@ -190,5 +190,31 @@ public class ProductService implements ICrud<Product> {
         return list;
     }
 
+    public List<Product> findByNameAndCategory(String nameOut, int categoryId) {
+        List<Product> list = new ArrayList<>();
+        String sql = "select * from product where name like ? and categoryId = ? and deleteflag = 0;";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, '%' + nameOut + '%');
+            preparedStatement.setInt(2, categoryId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String id = resultSet.getString("id");
+                String name = resultSet.getString("name");
+                int quantity = resultSet.getInt("quantity");
+                double price = resultSet.getDouble("price");
+                String manufacture = resultSet.getString("manufacture");
+                int category = resultSet.getInt("categoryId");
+                String image = resultSet.getString("image");
+                String description = resultSet.getString("description");
+                Product product = new Product(id, name, quantity, price, manufacture, category, image, description);
+                list.add(product);
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return list;
+    }
 
 }

@@ -20,14 +20,17 @@
             <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
         </ul>
         <ul class="header-links pull-right">
+            <c:if test="${sessionScope.user != null && sessionScope.user.role ==0}">
+                <li><a href="product?action=productmanager"><i class="fa fa-desktop"></i>Manager</a></li>
+            </c:if>
             <c:if test="${sessionScope.user == null}">
                 <li><a href="user?action=login"><i class="fa fa-user-o"></i> Login</a></li>
             </c:if>
+
             <c:if test="${sessionScope.user != null}">
-                <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
                 <li><a href="logout"><i class="fa fa-user-o"></i> Logout</a></li>
             </c:if>
+
         </ul>
     </div>
 </div>

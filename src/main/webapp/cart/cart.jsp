@@ -21,8 +21,6 @@
 <body>
 <main class="page">
 
-    <form action="" method="post">
-
     <section class="shopping-cart dark">
         <div class="container">
             <div class="block-heading">
@@ -81,7 +79,7 @@
                             </div>
                             <div class="summary-item"><span class="text">Total</span><span
                                     class="price">$${money}</span></div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                            <a href="http://localhost:8080/order?action=createorder"><button class="btn btn-primary btn-lg btn-block">Checkout</button></a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +87,6 @@
             </div>
         </div>
     </section>
-    </form>
 </main>
 <script>
     function incrementValue() {

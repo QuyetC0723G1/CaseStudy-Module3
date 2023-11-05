@@ -23,7 +23,7 @@ public class OrderController extends HttpServlet {
             case "ordermanager" :
                 showListOrder(request,response);
                 break;
-            case "create":
+            case "createorder":
                 showOrder(request,response);
                 break;
         }

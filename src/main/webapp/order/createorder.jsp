@@ -87,7 +87,7 @@
                                     <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
                                     <td class="emptyrow"></td>
                                     <td class="emptyrow text-center"><strong><h4>Total</h4></strong></td>
-                                    <td class="emptyrow text-right"><h4>${money}</h4></td>
+                                    <td class="emptyrow text-right"><h4>$ ${money}</h4></td>
                                 </tr>
                                 </tbody>
                             </table>

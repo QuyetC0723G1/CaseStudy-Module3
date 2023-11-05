@@ -2,6 +2,7 @@ package controller;
 
 import model.Category;
 import model.Product;
+import model.User;
 import service.CategoryService;
 import service.ProductService;
 
@@ -19,23 +20,42 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        HttpSession session = request.getSession();
+        User u = (User) session.getAttribute("user");
         switch (action) {
             case "products":
                 showListProduct(request, response);
+                break;
             case "formadd":
-                showFormAddProduct(request, response);
+                if (u != null && u.getRole() == 0) {
+                    showFormAddProduct(request, response);
+                } else {
+                    response.sendRedirect("home?action=home");
+                }
                 break;
             case "searchProduct":
                 searchProducts(request, response);
                 break;
             case "productmanager":
-                showCrud(request, response);
+                if (u != null && u.getRole() == 0) {
+                    showCrud(request, response);
+                } else {
+                    response.sendRedirect("home?action=home");
+                }
                 break;
             case "formedit":
-                showFormEdit(request, response);
+                if (u != null && u.getRole() == 0) {
+                    showFormEdit(request, response);
+                } else {
+                    response.sendRedirect("home?action=home");
+                }
                 break;
             case "delete":
-                deleteProduct(request, response);
+                if (u != null && u.getRole() == 0) {
+                    deleteProduct(request, response);
+                } else {
+                    response.sendRedirect("home?action=home");
+                }
                 break;
         }
     }
@@ -74,13 +94,12 @@ public class ProductController extends HttpServlet {
     private void searchProducts(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int categoryId = Integer.parseInt(request.getParameter("categoryId"));
         String searchstring = request.getParameter("searchstring");
-        if(categoryId ==0 ){
+        if (categoryId == 0) {
             request.setAttribute("listProduct", productService.findByName(searchstring));
             List<Category> listCat = categoryService.findAll();
             request.setAttribute("listCategory", listCat);
-        }
-        else {
-            request.setAttribute("listProduct", productService.findByNameAndCategory(searchstring,categoryId));
+        } else {
+            request.setAttribute("listProduct", productService.findByNameAndCategory(searchstring, categoryId));
             List<Category> listCat = categoryService.findAll();
             request.setAttribute("listCategory", listCat);
         }

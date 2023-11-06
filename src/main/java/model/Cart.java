@@ -36,6 +36,11 @@ public class Cart {
         this.customerName = customerName;
     }
 
+    public Cart(int customerId, String productId) {
+        this.customerId = customerId;
+        this.productId = productId;
+    }
+
     public String getCustomerName() {
         return customerName;
     }

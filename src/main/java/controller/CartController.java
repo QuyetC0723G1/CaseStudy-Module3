@@ -27,6 +27,10 @@ public class CartController extends HttpServlet {
             case "cart":
                 showCart(request,response);
                 break;
+            case "add":
+                addToCart(request,response);
+                break;
+
         }
     }
 
@@ -37,12 +41,24 @@ public class CartController extends HttpServlet {
                 userId = user.getId();}
         Customer cus = customerService.getCustomerByUserId(userId);
         List<Cart> carts = cartService.findByIdToShowCart(cus.getId());
-        double money = cartService.getTotalMoney(userId);
+        double money = cartService.getTotalMoney(cus.getId());
         request.setAttribute("carts",carts);
         request.setAttribute("money",money);
         request.setAttribute("customerName",cus.getName());
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("cart/cart.jsp");
         requestDispatcher.forward(request,response);
+    }
+    private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String productId = request.getParameter("id");
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            userId = user.getId();}
+        Customer cus = customerService.getCustomerByUserId(userId);
+        int customerId = cus.getId();
+        Cart cart = new Cart(customerId,productId);
+        cartService.addToCart(cart);
+        response.sendRedirect("product?action=products");
     }
 
     @Override

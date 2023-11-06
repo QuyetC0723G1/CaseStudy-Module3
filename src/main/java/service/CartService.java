@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartService implements ICrud<Cart>{
+public class CartService implements ICrud<Cart> {
     Connection connection = DbConnect.getConnection();
     List<Cart> cartList;
 
@@ -28,9 +28,9 @@ public class CartService implements ICrud<Cart>{
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(checkProductQuery);
             preparedStatement.setInt(1, Integer.parseInt("customerId"));
-            preparedStatement.setString(2,"productId");
+            preparedStatement.setString(2, "productId");
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()){
+            if (resultSet.next()) {
                 int cartId = resultSet.getInt("id");
                 int existingQuantity = resultSet.getInt("quantity");
                 int newQuantity = existingQuantity + quantity;
@@ -40,8 +40,7 @@ public class CartService implements ICrud<Cart>{
                 update.setInt(1, Integer.parseInt("quantity"));
                 update.setInt(2, Integer.parseInt("id"));
                 update.executeUpdate();
-            }
-            else {
+            } else {
                 String addProductQuery = "INSERT INTO cart (productId, quantity, customerId) VALUES (?, ?, ?)";
                 PreparedStatement addCart = connection.prepareStatement(addProductQuery);
                 addCart.setInt(1, customerId);
@@ -51,6 +50,19 @@ public class CartService implements ICrud<Cart>{
             }
             connection.close();
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void addToCart(Cart cart) {
+        String addProductQuery = "INSERT INTO cart (productId, customerId) VALUES (?, ?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(addProductQuery);
+            preparedStatement.setString(1, cart.getProductId());
+            preparedStatement.setInt(2, cart.getCustomerId());
+//            preparedStatement.setInt(3, cart.getQuantity());
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -88,7 +100,7 @@ public class CartService implements ICrud<Cart>{
 
     @Override
     public List<Cart> findAll() {
-       return null;
+        return null;
     }
 
     @Override
@@ -96,7 +108,8 @@ public class CartService implements ICrud<Cart>{
 
         return null;
     }
-    public List<Cart> findByIdToShowCart(int c_Id){
+
+    public List<Cart> findByIdToShowCart(int c_Id) {
         List<Cart> cartList = new ArrayList<>();
         String sql = "select p.name as name,p.image as image,c.name as customerName,p.description as description,ca.quantity as quantity, p.price * ca.quantity as price from cart ca\n" +
                 "join product p on ca.productId = p.id\n" +
@@ -104,16 +117,16 @@ public class CartService implements ICrud<Cart>{
                 "where c.id = ?;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,c_Id);
+            preparedStatement.setInt(1, c_Id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 String productName = resultSet.getString("name");
                 String description = resultSet.getString("description");
                 int quantity = resultSet.getInt("quantity");
                 double price = resultSet.getDouble("price");
                 String image = resultSet.getString("image");
                 String customerName = resultSet.getString("customerName");
-                Cart cart = new Cart(image,quantity,productName,description,price,customerName);
+                Cart cart = new Cart(image, quantity, productName, description, price, customerName);
                 cartList.add(cart);
             }
         } catch (SQLException e) {
@@ -122,7 +135,8 @@ public class CartService implements ICrud<Cart>{
 
         return cartList;
     }
-    public double getTotalMoney(int c_id){
+
+    public double getTotalMoney(int c_id) {
 //        List<Cart> cartList = new ArrayList<>();
         double totalMoney = 0;
         String sql = "select sum(ca.quantity*p.price) as totalMoney from cart ca\n" +
@@ -131,15 +145,16 @@ public class CartService implements ICrud<Cart>{
                 "where c.id = ?;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,c_id);
+            preparedStatement.setInt(1, c_id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 totalMoney = resultSet.getDouble("totalMoney");
             }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }return totalMoney;
+        }
+        return totalMoney;
     }
 
 }

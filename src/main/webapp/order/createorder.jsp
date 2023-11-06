@@ -92,6 +92,8 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div style="display: flex;justify-content: space-between">
+                            <button>Return to your Cart</button><button style="">payment confirmation</button></div>
                     </div>
                 </div>
             </div>

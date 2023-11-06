@@ -72,9 +72,8 @@
                         <!-- Cart -->
                         <div class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                <i class="fa fa-shopping-cart"></i>
+                                <i class="fa fa-shopping-cart" style="color: red"></i>
                                 <a href="http://localhost:8080/cart?action=cart"><span>Your Cart</span></a>
-                                <div class="qty">3</div>
                             </a>
                             <div class="cart-dropdown">
                                 <div class="cart-list">
@@ -349,7 +348,7 @@
                                 </div>
                             </div>
                             <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                <a href="/cart?action=add&id=${item.id}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
                             </div>
                         </div>
                     </div>

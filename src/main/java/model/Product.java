@@ -25,6 +25,7 @@ public class Product {
     }
 
 
+
 //    public boolean isDeleteFlag() {
 //        return deleteFlag;
 //    }

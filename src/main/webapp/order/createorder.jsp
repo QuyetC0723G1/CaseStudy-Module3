@@ -93,7 +93,7 @@
                             </table>
                         </div>
                         <div style="display: flex;justify-content: space-between">
-                            <button>Return to your Cart</button><button style="">payment confirmation</button></div>
+                            <a href="http://localhost:8080/cart?action=cart"><button>Return to your Cart</button></a><button style="">payment confirmation</button></div>
                     </div>
                 </div>
             </div>

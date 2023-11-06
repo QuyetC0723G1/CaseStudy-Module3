@@ -59,6 +59,9 @@
                                                     <div class="col-md-3 price">
                                                         <span>$${item.price}</span>
                                                     </div>
+                                                    <div>
+                                                        <a href="http://localhost:8080/cart?action=delete&id=${item.id}"><button style="margin-left: 15px;color: #e7e7e7;border-radius: 4px;font-weight: bold;margin-top: 4px;outline: 0;border: 0;background-color: #f13535;box-shadow: -1px 0px 26px -4px rgba(0,0,0,0.75);">Delete</button></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

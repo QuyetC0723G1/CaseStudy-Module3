@@ -30,6 +30,9 @@ public class CartController extends HttpServlet {
             case "add":
                 addToCart(request,response);
                 break;
+            case "delete" :
+                deleteCart(request,response);
+                break;
 
         }
     }
@@ -59,6 +62,11 @@ public class CartController extends HttpServlet {
         Cart cart = new Cart(customerId,productId);
         cartService.addToCart(cart);
         response.sendRedirect("product?action=products");
+    }
+    private void deleteCart(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String id = request.getParameter("id");
+        cartService.remove(id);
+        response.sendRedirect("cart?action=cart");
     }
 
     @Override

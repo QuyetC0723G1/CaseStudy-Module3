@@ -90,12 +90,26 @@ public class CartService implements ICrud<Cart> {
 
     @Override
     public void remove(int id) {
-
+        String sql = "update cart set deleteflag = 1 where id = ?;";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
     public void remove(String id) {
-
+        String sql = "update cart set deleteflag = 1 where id = ?;";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, Integer.parseInt(id));
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -111,22 +125,23 @@ public class CartService implements ICrud<Cart> {
 
     public List<Cart> findByIdToShowCart(int c_Id) {
         List<Cart> cartList = new ArrayList<>();
-        String sql = "select p.name as name,p.image as image,c.name as customerName,p.description as description,ca.quantity as quantity, p.price * ca.quantity as price from cart ca\n" +
+        String sql = "select ca.id, p.name as name,p.image as image,c.name as customerName,p.description as description,ca.quantity as quantity, p.price * ca.quantity as price from cart ca\n" +
                 "join product p on ca.productId = p.id\n" +
                 "join customer c on ca.customerId = c.id\n" +
-                "where c.id = ?;";
+                "where c.id = ? and ca.deleteflag = 0;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, c_Id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
+                int id = resultSet.getInt("id");
                 String productName = resultSet.getString("name");
                 String description = resultSet.getString("description");
                 int quantity = resultSet.getInt("quantity");
                 double price = resultSet.getDouble("price");
                 String image = resultSet.getString("image");
                 String customerName = resultSet.getString("customerName");
-                Cart cart = new Cart(image, quantity, productName, description, price, customerName);
+                Cart cart = new Cart(id,image, quantity, productName, description, price, customerName);
                 cartList.add(cart);
             }
         } catch (SQLException e) {
@@ -142,7 +157,7 @@ public class CartService implements ICrud<Cart> {
         String sql = "select sum(ca.quantity*p.price) as totalMoney from cart ca\n" +
                 "join product p on ca.productId = p.id\n" +
                 "join customer c on ca.customerId = c.id\n" +
-                "where c.id = ?;";
+                "where c.id = ? and ca.deleteflag = 0;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, c_id);

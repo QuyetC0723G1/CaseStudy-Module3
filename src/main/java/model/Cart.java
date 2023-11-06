@@ -27,7 +27,8 @@ public class Cart {
 //        this.deleteFlag = false;
     }
 
-    public Cart(String productImage,int quantity, String name, String description, double price,String customerName) {
+    public Cart(int id,String productImage,int quantity, String name, String description, double price,String customerName) {
+        this.id = id;
         this.quantity = quantity;
         this.name = name;
         this.description = description;

@@ -1,8 +1,11 @@
 package controller;
 
 import model.Cart;
+import model.Customer;
 import model.Order;
+import model.User;
 import service.CartService;
+import service.CustomerService;
 import service.OrderService;
 
 import javax.servlet.*;
@@ -16,6 +19,8 @@ import java.util.List;
 public class OrderController extends HttpServlet {
     private  final OrderService orderService = new OrderService();
     private CartService cartService = new CartService();
+    CustomerService customerService = new CustomerService();
+    int userId;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -35,8 +40,15 @@ public class OrderController extends HttpServlet {
         requestDispatcher.forward(request,response);
     }
     public void showOrder(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
-        List<Cart> list = cartService.findByIdToShowCart(133);
-        double money = cartService.getTotalMoney(133);
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            userId = user.getId();}
+        Customer cus = customerService.getCustomerByUserId(userId);
+        int customerId = cus.getId();
+
+        List<Cart> list = cartService.findByIdToShowCart(customerId);
+        double money = cartService.getTotalMoney(customerId);
         String name = list.get(0).getCustomerName();
         request.setAttribute("listPick",list);
         request.setAttribute("money",money);

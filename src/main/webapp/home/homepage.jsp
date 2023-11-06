@@ -66,55 +66,55 @@
                 <div class="col-md-3 clearfix">
                     <div class="header-ctn">
                         <!-- Wishlist -->
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-heart-o"></i>
-                                <span>Your Wishlist</span>
-                                <div class="qty">2</div>
-                            </a>
-                        </div>
+<%--                        <div>--%>
+<%--                            <a href="#">--%>
+<%--                                <i class="fa fa-heart-o"></i>--%>
+<%--                                <span>Your Wishlist</span>--%>
+<%--                                <div class="qty">2</div>--%>
+<%--                            </a>--%>
+<%--                        </div>--%>
                         <!-- /Wishlist -->
 
                         <!-- Cart -->
                         <div class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>Your Cart</span>
-                                <div class="qty">3</div>
+                                <i class="fa fa-shopping-cart" style="color: red"></i>
+                                <span style="color: red">Your Cart</span>
+<%--                                <div class="qty"></div>--%>
                             </a>
-                            <div class="cart-dropdown">
-                                <div class="cart-list">
-                                    <div class="product-widget">
-                                        <div class="product-img">
-                                            <img src="./img/product01.png" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-                                        </div>
-                                        <button class="delete"><i class="fa fa-close"></i></button>
-                                    </div>
+<%--                            <div class="cart-dropdown">--%>
+<%--                                <div class="cart-list">--%>
+<%--                                    <div class="product-widget">--%>
+<%--                                        <div class="product-img">--%>
+<%--                                            <img src="./img/product01.png" alt="">--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-body">--%>
+<%--                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                            <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>--%>
+<%--                                        </div>--%>
+<%--                                        <button class="delete"><i class="fa fa-close"></i></button>--%>
+<%--                                    </div>--%>
 
-                                    <div class="product-widget">
-                                        <div class="product-img">
-                                            <img src="./img/product02.png" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                            <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-                                        </div>
-                                        <button class="delete"><i class="fa fa-close"></i></button>
-                                    </div>
-                                </div>
-                                <div class="cart-summary">
-                                    <small>3 Item(s) selected</small>
-                                    <h5>SUBTOTAL: $2940.00</h5>
-                                </div>
-                                <div class="cart-btns">
-                                    <a href="#">View Cart</a>
-                                    <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
+<%--                                    <div class="product-widget">--%>
+<%--                                        <div class="product-img">--%>
+<%--                                            <img src="./img/product02.png" alt="">--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-body">--%>
+<%--                                            <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                            <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>--%>
+<%--                                        </div>--%>
+<%--                                        <button class="delete"><i class="fa fa-close"></i></button>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="cart-summary">--%>
+<%--                                    <small>3 Item(s) selected</small>--%>
+<%--                                    <h5>SUBTOTAL: $2940.00</h5>--%>
+<%--                                </div>--%>
+<%--                                <div class="cart-btns">--%>
+<%--                                    <a href="#">View Cart</a>--%>
+<%--                                    <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
                         </div>
                         <!-- /Cart -->
 
@@ -167,10 +167,10 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop01.png" alt="">
+                        <img src="./image/omega4.png" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Laptop<br>Collection</h3>
+                        <h3>Omega<br>Collection</h3>
                         <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -181,10 +181,10 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop03.png" alt="">
+                        <img src="./image/rolex5.png" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Accessories<br>Collection</h3>
+                        <h3>Rolex<br>Collection</h3>
                         <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -195,10 +195,10 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
+                        <img src="./image/applewatch3.png" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Cameras<br>Collection</h3>
+                        <h3>Apple<br>Collection</h3>
                         <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -212,192 +212,192 @@
 <!-- /SECTION -->
 
 <!-- SECTION -->
-<div class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
+<%--<div class="section">--%>
+<%--    <!-- container -->--%>
+<%--    <div class="container">--%>
+<%--        <!-- row -->--%>
+<%--        <div class="row">--%>
 
-            <!-- section title -->
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h3 class="title">New Products</h3>
-                    <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- /section title -->
+<%--            <!-- section title -->--%>
+<%--            <div class="col-md-12">--%>
+<%--                <div class="section-title">--%>
+<%--                    <h3 class="title">New Products</h3>--%>
+<%--                    <div class="section-nav">--%>
+<%--                        <ul class="section-tab-nav tab-nav">--%>
+<%--                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>--%>
+<%--                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>--%>
+<%--                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>--%>
+<%--                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <!-- /section title -->--%>
 
-            <!-- Products tab & slick -->
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="products-tabs">
-                        <!-- tab -->
-                        <div id="tab1" class="tab-pane active">
-                            <div class="products-slick" data-nav="#slick-nav-1">
-                                <!-- product -->
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
-                                        <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                            <span class="new">NEW</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <!-- /product -->
+<%--            <!-- Products tab & slick -->--%>
+<%--            <div class="col-md-12">--%>
+<%--                <div class="row">--%>
+<%--                    <div class="products-tabs">--%>
+<%--                        <!-- tab -->--%>
+<%--                        <div id="tab1" class="tab-pane active">--%>
+<%--                            <div class="products-slick" data-nav="#slick-nav-1">--%>
+<%--                                <!-- product -->--%>
+<%--                                <div class="product">--%>
+<%--                                    <div class="product-img">--%>
+<%--                                        <img src="./img/product01.png" alt="">--%>
+<%--                                        <div class="product-label">--%>
+<%--                                            <span class="sale">-30%</span>--%>
+<%--                                            <span class="new">NEW</span>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product-body">--%>
+<%--                                        <p class="product-category">Category</p>--%>
+<%--                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                                        <div class="product-rating">--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-btns">--%>
+<%--                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>--%>
+<%--                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>--%>
+<%--                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="add-to-cart">--%>
+<%--                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <!-- /product -->--%>
 
-                                <!-- product -->
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product02.png" alt="">
-                                        <div class="product-label">
-                                            <span class="new">NEW</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <!-- /product -->
+<%--                                <!-- product -->--%>
+<%--                                <div class="product">--%>
+<%--                                    <div class="product-img">--%>
+<%--                                        <img src="./img/product02.png" alt="">--%>
+<%--                                        <div class="product-label">--%>
+<%--                                            <span class="new">NEW</span>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product-body">--%>
+<%--                                        <p class="product-category">Category</p>--%>
+<%--                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                                        <div class="product-rating">--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star-o"></i>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-btns">--%>
+<%--                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>--%>
+<%--                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>--%>
+<%--                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="add-to-cart">--%>
+<%--                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <!-- /product -->--%>
 
-                                <!-- product -->
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product03.png" alt="">
-                                        <div class="product-label">
-                                            <span class="sale">-30%</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <!-- /product -->
+<%--                                <!-- product -->--%>
+<%--                                <div class="product">--%>
+<%--                                    <div class="product-img">--%>
+<%--                                        <img src="./img/product03.png" alt="">--%>
+<%--                                        <div class="product-label">--%>
+<%--                                            <span class="sale">-30%</span>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product-body">--%>
+<%--                                        <p class="product-category">Category</p>--%>
+<%--                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                                        <div class="product-rating">--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-btns">--%>
+<%--                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>--%>
+<%--                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>--%>
+<%--                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="add-to-cart">--%>
+<%--                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <!-- /product -->--%>
 
-                                <!-- product -->
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product04.png" alt="">
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <!-- /product -->
+<%--                                <!-- product -->--%>
+<%--                                <div class="product">--%>
+<%--                                    <div class="product-img">--%>
+<%--                                        <img src="./img/product04.png" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product-body">--%>
+<%--                                        <p class="product-category">Category</p>--%>
+<%--                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                                        <div class="product-rating">--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-btns">--%>
+<%--                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>--%>
+<%--                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>--%>
+<%--                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="add-to-cart">--%>
+<%--                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <!-- /product -->--%>
 
-                                <!-- product -->
-                                <div class="product">
-                                    <div class="product-img">
-                                        <img src="./img/product05.png" alt="">
-                                    </div>
-                                    <div class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-btns">
-                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                    </div>
-                                </div>
-                                <!-- /product -->
-                            </div>
-                            <div id="slick-nav-1" class="products-slick-nav"></div>
-                        </div>
-                        <!-- /tab -->
-                    </div>
-                </div>
-            </div>
-            <!-- Products tab & slick -->
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
+<%--                                <!-- product -->--%>
+<%--                                <div class="product">--%>
+<%--                                    <div class="product-img">--%>
+<%--                                        <img src="./img/product05.png" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product-body">--%>
+<%--                                        <p class="product-category">Category</p>--%>
+<%--                                        <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                        <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                                        <div class="product-rating">--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                            <i class="fa fa-star"></i>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-btns">--%>
+<%--                                            <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>--%>
+<%--                                            <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>--%>
+<%--                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="add-to-cart">--%>
+<%--                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <!-- /product -->--%>
+<%--                            </div>--%>
+<%--                            <div id="slick-nav-1" class="products-slick-nav"></div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /tab -->--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <!-- Products tab & slick -->--%>
+<%--        </div>--%>
+<%--        <!-- /row -->--%>
+<%--    </div>--%>
+<%--    <!-- /container -->--%>
+<%--</div>--%>
 <!-- /SECTION -->
 
 <!-- HOT DEAL SECTION -->
@@ -454,19 +454,19 @@
         <div class="row">
 
             <!-- section title -->
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h3 class="title">Top selling</h3>
-                    <div class="section-nav">
-                        <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab2">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab2">Accessories</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<%--            <div class="col-md-12">--%>
+<%--                <div class="section-title">--%>
+<%--                    <h3 class="title">Top selling</h3>--%>
+<%--                    <div class="section-nav">--%>
+<%--                        <ul class="section-tab-nav tab-nav">--%>
+<%--                            <li class="active"><a data-toggle="tab" href="#tab2">Laptops</a></li>--%>
+<%--                            <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>--%>
+<%--                            <li><a data-toggle="tab" href="#tab2">Cameras</a></li>--%>
+<%--                            <li><a data-toggle="tab" href="#tab2">Accessories</a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
             <!-- /section title -->
 
             <!-- Products tab & slick -->
@@ -479,7 +479,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product06.png" alt="">
+                                        <img src="./image/Patek Philippe1.png" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                             <span class="new">NEW</span>
@@ -511,7 +511,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product07.png" alt="">
+                                        <img src="./image/Breitling4.png" alt="">
                                         <div class="product-label">
                                             <span class="new">NEW</span>
                                         </div>
@@ -542,7 +542,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product08.png" alt="">
+                                        <img src="../image/Breitling2.png" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                         </div>
@@ -568,7 +568,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product09.png" alt="">
+                                        <img src="../image/rolex6.png" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -596,7 +596,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
+                                        <img src="./image/Breitling9.png" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -636,297 +636,297 @@
 <!-- /SECTION -->
 
 <!-- SECTION -->
-<div class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-            <div class="col-md-4 col-xs-6">
-                <div class="section-title">
-                    <h4 class="title">Top selling</h4>
-                    <div class="section-nav">
-                        <div id="slick-nav-3" class="products-slick-nav"></div>
-                    </div>
-                </div>
+<%--<div class="section">--%>
+<%--    <!-- container -->--%>
+<%--    <div class="container">--%>
+<%--        <!-- row -->--%>
+<%--        <div class="row">--%>
+<%--            <div class="col-md-4 col-xs-6">--%>
+<%--                <div class="section-title">--%>
+<%--                    <h4 class="title">Top selling</h4>--%>
+<%--                    <div class="section-nav">--%>
+<%--                        <div id="slick-nav-3" class="products-slick-nav"></div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="products-widget-slick" data-nav="#slick-nav-3">
-                    <div>
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product07.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                <div class="products-widget-slick" data-nav="#slick-nav-3">--%>
+<%--                    <div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product07.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product08.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product08.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product09.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- product widget -->
-                    </div>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product09.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                    </div>--%>
 
-                    <div>
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product01.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                    <div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product01.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product02.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product02.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product03.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- product widget -->
-                    </div>
-                </div>
-            </div>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product03.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
 
-            <div class="col-md-4 col-xs-6">
-                <div class="section-title">
-                    <h4 class="title">Top selling</h4>
-                    <div class="section-nav">
-                        <div id="slick-nav-4" class="products-slick-nav"></div>
-                    </div>
-                </div>
+<%--            <div class="col-md-4 col-xs-6">--%>
+<%--                <div class="section-title">--%>
+<%--                    <h4 class="title">Top selling</h4>--%>
+<%--                    <div class="section-nav">--%>
+<%--                        <div id="slick-nav-4" class="products-slick-nav"></div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="products-widget-slick" data-nav="#slick-nav-4">
-                    <div>
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product04.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                <div class="products-widget-slick" data-nav="#slick-nav-4">--%>
+<%--                    <div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product04.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product05.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product05.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product06.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- product widget -->
-                    </div>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product06.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                    </div>--%>
 
-                    <div>
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product07.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                    <div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product07.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product08.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product08.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product09.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- product widget -->
-                    </div>
-                </div>
-            </div>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product09.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
 
-            <div class="clearfix visible-sm visible-xs"></div>
+<%--            <div class="clearfix visible-sm visible-xs"></div>--%>
 
-            <div class="col-md-4 col-xs-6">
-                <div class="section-title">
-                    <h4 class="title">Top selling</h4>
-                    <div class="section-nav">
-                        <div id="slick-nav-5" class="products-slick-nav"></div>
-                    </div>
-                </div>
+<%--            <div class="col-md-4 col-xs-6">--%>
+<%--                <div class="section-title">--%>
+<%--                    <h4 class="title">Top selling</h4>--%>
+<%--                    <div class="section-nav">--%>
+<%--                        <div id="slick-nav-5" class="products-slick-nav"></div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="products-widget-slick" data-nav="#slick-nav-5">
-                    <div>
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product01.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                <div class="products-widget-slick" data-nav="#slick-nav-5">--%>
+<%--                    <div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product01.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product02.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product02.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product03.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- product widget -->
-                    </div>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product03.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                    </div>--%>
 
-                    <div>
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product04.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                    <div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product04.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product05.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- /product widget -->
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product05.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- /product widget -->--%>
 
-                        <!-- product widget -->
-                        <div class="product-widget">
-                            <div class="product-img">
-                                <img src="./img/product06.png" alt="">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-category">Category</p>
-                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-                            </div>
-                        </div>
-                        <!-- product widget -->
-                    </div>
-                </div>
-            </div>
+<%--                        <!-- product widget -->--%>
+<%--                        <div class="product-widget">--%>
+<%--                            <div class="product-img">--%>
+<%--                                <img src="./img/product06.png" alt="">--%>
+<%--                            </div>--%>
+<%--                            <div class="product-body">--%>
+<%--                                <p class="product-category">Category</p>--%>
+<%--                                <h3 class="product-name"><a href="#">product name goes here</a></h3>--%>
+<%--                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <!-- product widget -->--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
 
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
+<%--        </div>--%>
+<%--        <!-- /row -->--%>
+<%--    </div>--%>
+<%--    <!-- /container -->--%>
+<%--</div>--%>
 <!-- /SECTION -->
 
 <!-- NEWSLETTER -->

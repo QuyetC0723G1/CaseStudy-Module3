@@ -6,6 +6,7 @@ import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,5 +68,21 @@ public class CustomerService implements ICrud<Customer> {
     @Override
     public List<Customer> findByName(String name) {
         return null;
+    }
+
+    public Customer getCustomerByUserId(int userId){
+        String sql = "select * from Customer where userId = ?;";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,userId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt(1);
+                String name = resultSet.getString(2);
+                return new Customer(id,name);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }return null;
     }
 }

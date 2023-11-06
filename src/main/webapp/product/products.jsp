@@ -43,7 +43,6 @@
     <!-- TOP HEADER -->
    <%@include file="../header/header.jsp"%>
     <!-- /TOP HEADER -->
-
     <!-- MAIN HEADER -->
     <div id="header">
         <!-- container -->
@@ -333,9 +332,8 @@
                                 </div>
                             </div>
                             <div class="product-body">
-                                <p class="product-category">Category</p>
                                 <h3 class="product-name"><a href="#">${item.name}</a></h3>
-                                <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                                <h4 class="product-price">$ ${item.price} <del class="product-old-price">$${item.price*1.3}</del></h4>
                                 <div class="product-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>

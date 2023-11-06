@@ -4,6 +4,8 @@ import database.DbConnect;
 import model.Product;
 import model.User;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -84,7 +86,7 @@ public class UserService implements ICrud<User>{
             ps.setString(2,password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
-                User u = new User(rs.getString(2),rs.getString(3),rs.getString(6),rs.getInt(4));
+                User u = new User(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4),rs.getString(6));
                 return u;
             }
         }catch (Exception e){
@@ -108,4 +110,5 @@ public class UserService implements ICrud<User>{
         }
         return null;
     }
+
 }

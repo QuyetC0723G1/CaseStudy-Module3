@@ -19,7 +19,15 @@ public class User {
 //        this.deleteFlag = false;
     }
 
-    public User(String username, String password,String phoneNumber, int role) {
+    public User(int id, String username, String password, int role, String phoneNumber) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public User(String username, String password, String phoneNumber, int role) {
         this.username = username;
         this.password = password;
         this.phoneNumber = phoneNumber;

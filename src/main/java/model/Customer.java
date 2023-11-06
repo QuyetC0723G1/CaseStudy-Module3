@@ -19,6 +19,11 @@ public class Customer {
 //        this.deleteFlag = false;
     }
 
+    public Customer(int id,String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Customer(String name, int age, String address, String email, int userId) {
         this.name = name;
         this.age = age;
